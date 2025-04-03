@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Declares the character encoding for the document to ensure proper text rendering -->
+    <meta charset="UTF-8">
+    <!-- Ensures compatibility with Internet Explorer by using the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Makes the webpage responsive by adjusting the viewport settings for different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Provides a short description of the webpage for search engines and social media -->
+    <meta name="description" content="Play Tic Tac Toe online for fun.">
+    <!-- Helps search engines understand the main topics of the webpage for better indexing -->
+    <meta name="keywords" content="Tic Tac Toe, game, fun, online">
+    <!-- Specifies the author of the webpage -->
+    <meta name="author" content="Saurav Mehta">
+    <!-- Sets the title of the webpage, which appears in the browser tab -->
+    <title>Tic Tac Toe</title>
+    <!-- Links an external CSS file to style the webpage -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Adds a favicon (small icon) that appears in the browser tab next to the title -->
+    <link rel="icon" href="favicon.ico">
+    <!-- 
+        Links an external JavaScript file.
+        The `defer` attribute ensures that the script is executed only after the HTML is fully parsed, 
+        preventing it from blocking the rendering of the page.
+    -->
+    <!-- <script src="script.js" defer></script> The Browser Loads the Script first and makes UI rendering slow -->
+</head>
+<body>
+	<nav> 
+		<ul>
+			<li> MyTicTacToe.com</li>
+		</ul>
+	</nav>
+	<div class="gameContainer">
+	
+		<div class="container">
+			<div class="line"></div>
+			<div class="box bl-0 bt-0"><span class="boxText"></span></div>
+			<div class="box bt-0"><span class="boxText"></span></div>
+			<div class="box bt-0 br-0"><span class="boxText"></span></div>
+			<div class="box bl-0"><span class="boxText"></span></div>
+			<div class="box"><span class="boxText"></span></div>
+			<div class="box br-0"><span class="boxText"></span></div>
+			<div class="box bl-0 bb-0"><span class="boxText"></span></div>
+			<div class="box bb-0"><span class="boxText"></span></div>
+			<div class="box bb-0 br-0"><span class="boxText"></span></div>
+		</div>
+		<div class="gameInfo">
+			<h1>Welcome to Tic Tac Toe</h1>
+			<div class="information">
+				<span class="Info">Turn for X</span>
+				<button id="reset">Reset</button>
+			</div>
+			<div class="imageInfo">
+				<img src="./resources/excited.gif" alt="Excited">
+			</div>
+		</div>
+	</div>
+	<!-- The Browser loads HTML first and then this script. The page appeares quicker -->
+	<script src="script.js" defer></script> 
+</body>
+</html>
+ 

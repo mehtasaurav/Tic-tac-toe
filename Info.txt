@@ -1,0 +1,101 @@
+# CSS Measurement Units Explained
+
+## 1. Absolute Units (Fixed, Do Not Change)
+These units remain the same regardless of the screen size. Best for print designs.
+
+| Unit  | Meaning | Example |
+|--------|-------------|----------|
+| px  | Pixels (smallest unit on a screen) | width: 100px; |
+| cm  | Centimeters | width: 5cm; |
+| mm  | Millimeters | width: 50mm; |
+| in  | Inches (1 inch = 2.54 cm) | width: 2in; |
+| pt  | Points (1 pt = 1/72 inch, used in typography) | font-size: 12pt; |
+| pc  | Picas (1 pica = 12 points) | width: 5pc; |
+
+💡 Best to Use? → `px` is most common for screens.
+
+---
+
+## 2. Relative Units (Flexible, Good for Responsive Design)
+These units adjust dynamically based on the screen size or parent element.
+
+| Unit  | Relative to | Example |
+|--------|-----------------|----------|
+| %  | Parent element’s size | width: 50%; (50% of parent width) |
+| em  | Parent element’s font size | font-size: 2em; (Twice the parent’s font size) |
+| rem | Root element (html { font-size: }) | font-size: 1.5rem; |
+| vw  | Viewport width (1vw = 1% of screen width) | width: 50vw; (50% of screen width) |
+| vh  | Viewport height (1vh = 1% of screen height) | height: 100vh; (Full height of screen) |
+| vmin | Smaller of viewport width or height | width: 50vmin; |
+| vmax | Larger of viewport width or height | width: 50vmax; |
+
+💡 Best to Use? → `%`, `em`, `rem`, `vw`, `vh` are best for responsive designs.
+
+Percentage-based height (height: 25%) depends on the height of the parent element. If the parent has no defined height, then the browser does not know what "25%" refers to, so it does not apply the height correctly.
+
+html, body {
+    height: 100%;  /* Ensures the entire viewport height is used */
+    margin: 0;      /* Removes default margin */
+    padding: 0;     /* Removes default padding */
+}
+
+nav {
+    background-color: black;
+    color: white;
+    height: 25%; /* Now 25% of the body height */
+}
+
+---
+
+## 3. Special CSS Units
+Some units depend on other factors like the grid or font.
+
+| Unit | Meaning | Example |
+|------|---------|---------|
+| ch | Width of the character "0" | width: 10ch; (10 character widths) |
+| ex | Height of lowercase "x" | font-size: 2ex; |
+| fr | Fraction in CSS Grid | grid-template-columns: 1fr 2fr; |
+
+---
+
+## Which Unit Should You Use?
+✅ For Text Sizes: `rem` or `em` (so it scales with user settings)  
+✅ For Layouts: `%`, `vw`, `vh`, `fr` (for responsiveness)  
+✅ For Fixed Elements (Icons, Borders, etc.): `px`  
+
+-------------------------------------------------------------------------------------------------------------------
+
+# What is a Viewport?
+
+The **viewport** is the **visible area** of a webpage on a user's device (like a phone, tablet, or computer screen).
+
+Think of it like a **window** through which you see a webpage. The size of the viewport **changes** based on the device and screen size.
+
+For example:
+- On a **desktop**: The viewport might be **1920x1080 pixels** (full HD screen).
+- On a **tablet**: The viewport might be **768x1024 pixels**.
+- On a **mobile phone**: The viewport might be **375x667 pixels**.
+
+---
+
+## How Does the Viewport Affect Web Design?
+
+Websites need to be **responsive** (adjust to different screen sizes). If a website is too **wide**, it won’t fit on a mobile screen properly, causing **horizontal scrolling**.
+
+To solve this, we use the following **meta tag** inside the `<head>` section of HTML:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+CSS Eg : 
+.box {
+    width: 50vw;  /* 50% of the viewport width */
+    height: 30vh; /* 30% of the viewport height */
+    background-color: lightblue;
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+
+
+
