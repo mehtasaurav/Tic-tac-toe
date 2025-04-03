@@ -16,9 +16,7 @@ CSS – Styling for a clean UI
 JavaScript – Game logic, win detection, and event handling
 
 📺 Watch
-https://github.com/user-attachments/assets/3642da0f-e6d8-43a6-baf9-409eb6fde5cf
-
-
+https://github.com/user-attachments/assets/532d7e0e-3874-4e87-ae89-c459acff7b4d
 
 📷 Screenshot
 ![image](https://github.com/user-attachments/assets/33a2c2dd-9234-410c-b805-ecc0c00690d3)
